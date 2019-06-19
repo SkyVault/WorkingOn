@@ -4,6 +4,8 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+
+<!-- TODO(Dustin): Move this to navabar template -->
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
@@ -11,4 +13,11 @@
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a>
 {% endif %}
+
+<!-- TODO(Dustin): Move this to header template -->
+<h1> <{{ global_constants.TEST }}> </h1>
+
+<!-- TODO(Dustin): Move to featured projects template -->
+<h2> Featured projects</h2>
+
 {% endblock %}
