@@ -12,8 +12,10 @@ def FrontPage(request):
 
 # TODO(Dustin): Probably need to move this, not sure where...
 def ProjectView(request, project_id):
+    project = Project.objects.get(id=project_id)
     context = {
         'APPNAME': "WorkingOn",
-        'project': Project.objects.get(id=project_id)
+        'project': project,
+        'posts': project.post_set.all()
     }
     return render(request, 'project.html', context)

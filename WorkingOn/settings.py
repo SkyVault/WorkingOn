@@ -25,7 +25,7 @@ SECRET_KEY = '*irql-^0tpm$-2@q)=a$ay&4id6ubq0=$$=ixn6m)q$#9^kpgc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] # TEMP
 
 
 # Application definition

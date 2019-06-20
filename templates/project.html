@@ -2,9 +2,25 @@
 
 {% block content %}
 
+<a href="/">back</a>
+
 <h1> {{project.title}}</h1>
 <h6> {{project.author.username}}</h6>
 
-<a href="/">back</a>
+<div>
+  {% for post in posts %}
+  <div>
+    <h4> {{post.title}} </h4>
+    <p> {{post.description}} </p>
+    <iframe
+      src="{{post.url}}"
+      style="border:none;"
+      scrolling="yes"
+      frameborder="0"
+      allowTransparency="true"></iframe>
+
+  </div>
+  {% endfor %}
+</div>
 
 {% endblock %}
