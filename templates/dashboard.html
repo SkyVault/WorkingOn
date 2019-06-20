@@ -5,7 +5,21 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
+
+<a href="/">back</a>
+
 {% if user.is_authenticated %}
+
+<h1> {{user.username}}'s Dashboard </h1>
+
+{% for project in projects %}
+<!-- TODO(Dustin): Make a project card template -->
+<div>
+    <h3> {{project.title}} </h3>
+    <a> view </a>
+    <a> delete </a> 
+</div>
+{% endfor %}
 
 {% else %}
   <a href="{% url 'login' %}">Please sign in to view your dashboard</a>
