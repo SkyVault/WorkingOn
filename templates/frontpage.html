@@ -8,7 +8,9 @@
 {% if user.is_authenticated %}
 
   Hi <b>{{ user.username }}!</b>
-  <p><a href="{% url 'logout' %}">logout</a></p>
+  <a href="{% url 'logout' %}">logout</a>
+  <a href="{% url 'logout' %}">new post</a>
+  <a href="{% url 'dashboard' %}">dashboard</a>
 
 {% else %}
 

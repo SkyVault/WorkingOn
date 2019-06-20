@@ -9,6 +9,7 @@ urlpatterns = [
     # Django will pick this one first over the one below.
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('dashboard/', include('dashboard.urls')),
 
     path('', include('frontpage.urls')),
 
