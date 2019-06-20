@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from .models import Project
 
 
 def FrontPage(request):
-    return render(request, 'frontpage.html')
+    context = {
+        'projects': Project.objects.all()
+    }
+    return render(request, 'frontpage.html', context)
