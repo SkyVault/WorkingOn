@@ -6,7 +6,8 @@
 
 {% block content %}
 
-<a href="/">back</a>
+<a href="/"><button type="button" class="btn btn-primary">home</button></a>
+<a href="{% url 'newproject' %}"<button type="button" class="btn btn-primary">new project</button></a>
 
 {% if user.is_authenticated %}
 
@@ -16,7 +17,7 @@
 <!-- TODO(Dustin): Make a project card template -->
 <div>
     <h3> {{project.title}} </h3>
-    <a> view </a>
+    <a href="/projects/{{project.id}}"> view </a>
     <a> delete </a> 
 </div>
 {% endfor %}
